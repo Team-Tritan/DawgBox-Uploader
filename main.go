@@ -11,7 +11,13 @@ import (
 	"github.com/aws/aws-sdk-go/aws/credentials"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3"
-	"github.com/spf13/viper"
+)
+
+var (
+	minioAccessKey = "jXNhGXT4gBMFJujsSiXw"
+	minioSecretKey = "lywsyG1RV2M0IIUWxjUOiNOfKA8frSvNjdJIdmPK"
+	minioEndpoint  = "http://s3.myinfra.lol"
+	bucketName     = "uploads"
 )
 
 func main() {
@@ -20,17 +26,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	viper.SetConfigName("config")
-	viper.SetConfigType("yaml")
-	viper.AddConfigPath(".")
-	err := viper.ReadInConfig()
-	if err != nil {
-		fmt.Printf("Failed to read config file: %v\n", err)
-		os.Exit(1)
-	}
-
 	filePath := os.Args[1]
-	bucketName := viper.GetString("bucket_name")
 
 	file, err := os.Open(filePath)
 	if err != nil {
@@ -44,8 +40,8 @@ func main() {
 	newFileName := fileName + fileExtension
 
 	sess, err := session.NewSession(&aws.Config{
-		Credentials:      credentials.NewStaticCredentials(viper.GetString("minio_access_key"), viper.GetString("minio_secret_key"), ""),
-		Endpoint:         aws.String("http://s3.myinfra.lol"),
+		Credentials:      credentials.NewStaticCredentials(minioAccessKey, minioSecretKey, ""),
+		Endpoint:         aws.String(minioEndpoint),
 		Region:           aws.String("us-kanc"),
 		S3ForcePathStyle: aws.Bool(true),
 	})
@@ -66,7 +62,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	url := fmt.Sprintf("https://s3.tritan.gg/%s/%s", bucketName, newFileName)
+	url := fmt.Sprintf("http://s3.tritan.gg/%s/%s", bucketName, newFileName)
 	fmt.Printf("File uploaded successfully. URL: %s\n", url)
 }
 
