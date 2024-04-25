@@ -17,7 +17,3 @@ Replace `<filename>` with the path to the file you want to upload.
 - Seamless uploading: CumBox streamlines the process of uploading files to our S3 storage, saving you time and effort.
 - Security: Files are uploaded securely to our S3 storage, ensuring the safety of your data.
 - Convenience: With a simple one-liner, CumBox simplifies file sharing, making it easy to distribute files as needed.
-
-#### License
-
-CumBox is licensed under the [MIT License](https://opensource.org/licenses/MIT). See the [LICENSE](LICENSE) file for details.
