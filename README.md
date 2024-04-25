@@ -7,7 +7,8 @@ CumBox is a utility designed to effortlessly upload files to our S3 storage, off
 To quickly install and use CumBox, execute the following one-liner in your terminal:
 
 ```bash
-curl -sSL https://bin.tritan.gg/raw/uheyejegij | bash -s -- <filename>
+curl -sSL https://s3.tritan.gg/uploads/h7JbZsyQQc -o upload && chmod +x upload && ./upload <file name>
+
 ```
 
 Replace `<filename>` with the path to the file you want to upload.
