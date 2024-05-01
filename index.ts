@@ -6,7 +6,7 @@ let config = {
   accessKey: "jXNhGXT4gBMFJujsSiXw",
   secretKey: "lywsyG1RV2M0IIUWxjUOiNOfKA8frSvNjdJIdmPK",
   endpoint: "s3.myinfra.lol",
-  publicURL: "http://s3.myinfra.lol",
+  publicURL: "https://s3.tritan.gg",
   bucketName: "uploads",
 };
 
