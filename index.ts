@@ -3,8 +3,6 @@ import { createReadStream } from "fs";
 import { extname } from "path";
 
 let config = {
-  accessKey: "jXNhGXT4gBMFJujsSiXw",
-  secretKey: "lywsyG1RV2M0IIUWxjUOiNOfKA8frSvNjdJIdmPK",
   endpoint: "s3.myinfra.lol",
   publicURL: "https://s3.tritan.gg",
   bucketName: "uploads",
@@ -30,8 +28,8 @@ async function main(filePath: string) {
 
   const minioClient = new Client({
     endPoint: config.endpoint,
-    accessKey: config.accessKey,
-    secretKey: config.secretKey,
+    accessKey: "",
+    secretKey: "",
     useSSL: false,
   });
 
