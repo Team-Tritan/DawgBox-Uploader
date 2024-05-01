@@ -1,1 +1,13 @@
-{ "dependencies": { "@types/node": "^20.12.7", "fs": "^0.0.1-security", "minio": "^8.0.0", "path": "^0.12.7" } }
+{
+    "scripts": {
+        "build": "bun build --compile index.ts --outfile upload",
+        "start": "bun index.ts",
+        "dev": "bun run --hot index.ts"
+    },
+  "dependencies": {
+    "@types/node": "^20.12.7",
+    "fs": "^0.0.1-security",
+    "minio": "^8.0.0",
+    "path": "^0.12.7"
+  }
+}
