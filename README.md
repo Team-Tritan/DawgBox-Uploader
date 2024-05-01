@@ -1,6 +1,6 @@
-### CumBox
+### DawgBox
 
-CumBox is a utility designed to effortlessly upload files to our S3 storage, offering similar functionality to the catbox script. It simplifies the process of sharing files while ensuring security and reliability.
+DawgBox is a utility designed to effortlessly upload files to our S3 storage, offering similar functionality to the catbox script. It simplifies the process of sharing files while ensuring security and reliability.
 
 #### Usage
 
