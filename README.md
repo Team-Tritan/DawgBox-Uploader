@@ -4,7 +4,7 @@ DawgBox is a utility designed to effortlessly upload files to our S3 storage, of
 
 #### Usage
 
-To quickly install and use CumBox, execute the following one-liner in your terminal:
+To quickly install and use DawgBox, execute the following one-liner in your terminal:
 
 ```bash
 curl -sSL https://s3.tritan.gg/main/uploader -o upload && chmod +x upload && ./upload <file name>
