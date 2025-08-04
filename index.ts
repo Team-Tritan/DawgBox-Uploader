@@ -3,7 +3,7 @@ import { createReadStream } from "fs";
 import { extname } from "path";
 
 let config = {
-  endpoint: "s3.mci.bb.tritan.host",
+  endpoint: "s3.mci.tritan-bb.net",
   publicURL: "https://s3.tritan.gg",
   bucketName: "uploads",
 };
